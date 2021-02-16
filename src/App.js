@@ -1,13 +1,20 @@
+import React, { useState} from 'react';
+import Form from "./components/fourm";
+import TodoList from "./components/ToDoList";
 import './App.css';
-import AddTask from './components/appTask.components/addTask.components';
-// import AddedTask from './components/addedTask.component/addedTask.component';
 
 function App() {
-  return (
-    <div className="App">
-       <AddTask/>
+  const [inputText, setInputText] = useState('');
+  const [toDos, setToDos] = useState([]);
+  return(
+    <div className='App'>
+      <header>
+        Adarsh's To Do's
+      </header>
+      <Form setInputText={setInputText} />
+      <TodoList />
     </div>
-  );
+  )
 }
 
 export default App;
