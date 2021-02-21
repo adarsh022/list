@@ -11,7 +11,7 @@ const TodoList = ({toDos, setToDos}) => {
           setToDos={setToDos} 
           toDos={toDos} 
           key={toDo.id} 
-          todo={toDos} 
+          todo={toDo} 
           text={toDo.text} 
         />
       ))}

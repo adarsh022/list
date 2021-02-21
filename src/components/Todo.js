@@ -2,10 +2,11 @@ import React from 'react';
 
 const Todo = ({text ,toDo, toDos, setToDos}) => {
   //adding events listiners
-  const deleteHandler = () => {
-    setToDos(toDos.filter((el) => el.id !== toDo.id));
-    // console.log(toDo);
-  }
+  
+  const deleteHandler = () => { 
+    console.log(toDo);
+    // setToDos(toDos.filter((el) => el.id !== toDo.id));
+  };
   return(
     <div className="todo">
       <li className="todo-item">{text}</li>

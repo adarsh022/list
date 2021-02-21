@@ -20,7 +20,7 @@ function App() {
         />
       <TodoList setToDos={setToDos}  toDos={toDos}/>
     </div >
-  )
-}
+  );
+};
 
 export default App;

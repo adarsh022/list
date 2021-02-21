@@ -4,6 +4,7 @@ const Form = ({setInputText,toDos,setToDos,inputText}) => {
 
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
+    console.log(e.target.value);
   };
   const submitToHandler = (e) => {
     e.preventDefault();
