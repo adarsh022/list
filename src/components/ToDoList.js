@@ -15,6 +15,11 @@ function TodoList() {
 
     setTodos(newTodos);
     console.log(todo);
+  };
+
+  const removeTodo= id => {
+    const removeArr = [...todos].filter(todo => todo.id != id);
+    setTodos(removeArr);
   }
 
   const completeTodo = id => {
@@ -25,7 +30,7 @@ function TodoList() {
       return todo
     })
     setTodos(updatedTodos);
-  }
+  };
 
   return (
     <div>
@@ -33,7 +38,9 @@ function TodoList() {
       <TodoForm onSubmit={addTodo} />
       <Todo 
         todos={todos}
-        completeTodo={completeTodo}/>
+        completeTodo={completeTodo}
+        removeTodo={removeTodo}
+      />
     </div>
   )
 }
