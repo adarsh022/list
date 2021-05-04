@@ -11,11 +11,12 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}) {
 
   const submitUpdate = value => {
     updateTodo(edit.id, value)
+    // console.log(value)
     setEdit({
       id: null,
       value: ''
-    })
-  }
+    });
+  };
 
   if (edit.id){
     return <TodoForm edit={edit} onSubmit={submitUpdate} />;

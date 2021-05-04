@@ -6,14 +6,14 @@ import TodoForm from './TodoForm';
 function TodoList() {
 
   const [todos,setTodos] = useState([]);
-
+console.log(todos)
   const addTodo = todo => {
     if(!todo.text || /^\s*$/.test(todo.text)){
       return
     }
     const newTodos = [todo, ...todos]
     setTodos(newTodos);
-    console.log(todo);
+    // console.log(todo);
   };
 
   const updateTodo = (todoId, newValue) => {
